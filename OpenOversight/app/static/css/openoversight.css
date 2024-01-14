@@ -1,0 +1,700 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 100px;
+  padding-top: 65px;
+  padding-bottom: 100px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 100px;
+}
+
+div[role=main] {
+    padding-bottom: 30px;
+}
+
+.social:hover {
+    color: #000000;
+     -webkit-transform: scale(1.1);
+     -moz-transform: scale(1.1);
+     -o-transform: scale(1.1);
+ }
+ .social {
+     color: #333333;
+     -webkit-transform: scale(0.8);
+     /* Browser Variations: */
+
+     -moz-transform: scale(0.8);
+     -o-transform: scale(0.8);
+     -webkit-transition-duration: 0.5s;
+     -moz-transition-duration: 0.5s;
+     -o-transition-duration: 0.5s;
+ }
+
+.frontpage-leads {
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.subtle-pad {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+/*
+    Multicoloured Hover Variations
+*/
+
+ #social-fb:hover {
+     color: #3B5998;
+ }
+ #social-tw:hover {
+     color: #4099FF;
+ }
+ #social-gp:hover {
+     color: #d34836;
+ }
+ #social-em:hover {
+     color: #f39c12;
+ }
+
+ .theme-dropdown .dropdown-menu {
+     position: static;
+     display: block;
+     margin-bottom: 20px;
+ }
+
+ .theme-showcase > p > .btn {
+     margin: 5px 0;
+ }
+
+ .theme-showcase .navbar .container {
+     width: auto;
+ }
+
+  #navbar li a {
+     border: 0 solid rgba(0, 0, 0, 0);
+     border-bottom-width: 2px;
+     border-radius: 0;
+ }
+
+ #navbar li a:hover {
+     border-color: black;
+ }
+
+ .glyphicon {
+     font-size: 30px;
+     -webkit-text-stroke: 2px #fff;
+ }
+
+a > .tutorial{
+    color:red;
+    padding-right: 8px;
+ }
+ .thumbnail_container {
+     float:left;
+     max-height:300px;
+     max-width:80%;
+     padding-bottom: 210%;
+     margin:25px;
+ }
+
+ .thumbnail img {
+     max-height:80%;
+     max-width:80%;
+ }
+
+ /* Carousel base class */
+ .carousel {
+   min-height: 700px;
+   margin-bottom: 50px;
+ }
+
+ /* Since positioning the image, we need to help out the caption */
+ .carousel-caption {
+   display:block;
+   top: 0;
+   bottom: auto;
+   z-index: 10;
+   text-shadow: none;
+ }
+
+ /* Declare heights because of positioning of img element */
+ .carousel .item {
+   top: 0;
+   bottom: auto;
+   min-height: 700px;
+   margin-top: 50px;
+ }
+ .carousel-inner > .item > img {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+ }
+
+ /* Limit image width to avoid overflow the cropper container */
+ img {
+   max-width: 100%;
+ }
+
+ meter {
+     margin: 0 auto 1em;
+     width: 100%;
+     height: 0.5em;
+ }
+
+/* Password strength */
+
+ meter[value="1"].meter::-webkit-meter-optimum-value { background: red; }
+ meter[value="2"].meter::-webkit-meter-optimum-value { background: red; }
+ meter[value="3"].meter::-webkit-meter-optimum-value { background: yellow; }
+ meter[value="4"].meter::-webkit-meter-optimum-value { background: orange; }
+ meter[value="5"].meter::-webkit-meter-optimum-value { background: green; }
+ meter[value="1"].meter::-moz-meter-bar { background: red; }
+ meter[value="2"].meter::-moz-meter-bar { background: red; }
+ meter[value="3"].meter::-moz-meter-bar { background: yellow; }
+ meter[value="4"].meter::-moz-meter-bar { background: orange; }
+ meter[value="5"].meter::-moz-meter-bar { background: green; }
+ meter.goodmeter::-webkit-meter-optimum-value { background: green; }
+ meter.goodmeter::-moz-meter-bar { background: green; }
+ meter.badmeter::-moz-meter-bar { background: red; }
+ meter.badmeter::-webkit-meter-optimum-value { background: red; }
+
+ .alert-info {
+     background-image:none;
+     background-repeat: repeat-x;
+     border-color: #5bc0de;
+     background-color: #5bc0de;
+ }
+
+ .hero-section {
+     /*TODO: get background image- using color as standin for now*/
+     background-color: #d3d3d3;
+     text-align: center;
+     padding: 60px 0 80px 0;
+ }
+
+.hero-section.no-sub {
+    padding: 110px;
+}
+
+.hero {
+    color:white;
+    font-size:40px;
+    text-shadow: 1px 1px 1px #999;
+}
+
+@media (max-width: 550px) {
+    .hero {
+        font-size: 28px;
+    }
+    .hero-section {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+.subhero {
+    color: #333;
+    font-size: 18px;
+    font-family: Courier, sans-serif;
+}
+
+ .hr-banner {
+     padding: 90px;
+     font-weight: 300;
+     background-color: #333333;
+     color: white;
+     text-align: center;
+     font-size: 28px;
+ }
+
+.hr-banner p {
+    font-size: 18px;
+}
+
+ h1 small {
+     color: #333333;
+     margin-bottom: 0px;
+ }
+
+
+ p {
+     margin: 20px auto;
+ }
+
+ .lead.margin-less {
+     margin-bottom: 0;
+     margin-top: 10px;
+ }
+
+ .btn {
+     color: #555555;
+ }
+
+.btn:hover {
+    color: #333333;
+}
+
+ .btn-lg {
+     border-color:black;
+     border-width: 2px;
+     border-radius: 50px;
+     text-transform: uppercase;
+     font-size: 14px;
+     padding: 14px 28px;
+ }
+
+.btn-primary {
+    background: white;
+    color: black;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    border-color: #555555;
+    background: white;
+    color: #555555;
+}
+
+.btn-secondary {
+    background: black;
+    color: white;
+    font-size: 14px;
+    padding: 14px 28px;
+}
+
+.btn-secondary:hover {
+    background: #333333;
+    color: white;
+}
+
+.btn-danger {
+    background: white;
+    color: black;
+    border-color: red;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    border-color: #555555;
+    background-color: white;
+    color: #555555;
+}
+
+.btn-success {
+    background: white;
+    color: black;
+    border-color: green;
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
+
+.btn-success:hover {
+    border-color: #555555;
+    background-color: white;
+    color: #555555;
+}
+
+.btn-info {
+    background: #0000ff;
+    color: white;
+    border: none;
+}
+
+.btn-info:hover {
+    background: #1e90ff;
+    color: white;
+}
+
+.btn-unstyled {
+    padding: 0;
+    color: #666666;
+}
+
+.btn-unstyled:hover {
+    color: #333333;
+    text-decoration: none;
+}
+
+.control-label {
+    text-transform: uppercase;
+    color: #555555;
+    font-size: smaller;
+}
+
+.text-gray-lighter {
+    color: #D3D3D3;
+}
+
+.bg-light-gray {
+    background-color: #eeeeee;
+}
+
+.bg-blue-gray {
+    background-color: #dce1e5;
+}
+
+.bg-light-blue {
+    background-color: #e8f0f9;
+}
+
+.bg-white {
+    background-color: #ffffff;
+}
+
+.col-half-border {
+    padding: 60px;
+    border: 1px solid #d3d3d3;
+    margin: 12px;
+}
+
+.col-half-no-border {
+    height: inherit;
+    padding: 70px 120px;
+    width: 100%;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.bordered-box {
+    border: 0 solid #999999;
+    border-right-width: 1px;
+}
+
+@media (max-width: 750px) {
+    .display-flex {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .bordered-box {
+        border-right-width: 0;
+        border-bottom-width: 1px;
+    }
+}
+
+.vertical-padding {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.horizontal-padding {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.small-horizontal-padding {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    clear: left;
+}
+
+.sink-row {
+    position: relative;
+    margin-top: -70px;
+}
+
+.font-weight-300 {
+    font-weight: 300;
+}
+
+.i {
+    font-style: italic;
+}
+
+.pb-50 {
+    padding-bottom: 50px;
+}
+
+.pb-90 {
+    padding-bottom: 90px;
+}
+
+.pt-35 {
+    padding-top: 35px;
+}
+
+.browse-form-input{
+    display: inline-block;
+    vertical-align: middle;
+    width: 190px;
+}
+
+.row-actions {
+    white-space: nowrap;
+    position: relative;
+    left: -9999em;
+}
+
+tr:hover .row-actions {
+    position: static;
+}
+
+.row-actions span {
+    font-size: smaller;
+}
+
+.row-actions .delete a {
+    color: #a00;
+}
+
+.sortable-fields fieldset > div {
+  margin-bottom: 2rem;
+}
+
+.sortable-fields fieldset .glyphicon {
+  font-size: 14px;
+  cursor: move;
+}
+
+.filter-sidebar label.form-check {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.filter-sidebar .form-group {
+    margin-bottom: 0;
+}
+
+.filter-sidebar .checkbox {
+    margin-top: 0;
+}
+
+.filter-sidebar .panel {
+    margin-bottom: 10px;
+}
+
+.filter-sidebar .panel-heading {
+    background-color: transparent;
+    border-bottom: none;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.filter-sidebar .panel-body {
+    padding: 5px 0;
+}
+
+.filter-sidebar .panel-body-long {
+    max-height: 25vh;
+    overflow-y: auto;
+}
+
+.filter-sidebar .panel-heading .accordion-toggle:after {
+    font-family: 'Glyphicons Halflings';
+    content: "\e252";
+    float: right;
+    font-size: 0.7em;
+    padding-top: 0.3em;
+}
+
+.filter-sidebar .panel-heading.collapsed .accordion-toggle:after {
+    content: "\e253";
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+    .filter-sidebar > .form > .btn.btn-primary:first-of-type {
+        margin-bottom: 5px;
+    }
+}
+
+.search-results .list-group-item {
+    border: 0;
+}
+
+
+.console .button-explanation {
+    height:35px;
+    font-size:16px;
+    position:relative;
+    width: 90%;
+    float:left;
+}
+
+.docs-data .input-explanation {
+    height:35px;
+    font-size:16px;
+    position:relative;
+    width: 350%;
+    float:left;
+    left:-280px;
+    bottom:-35px;
+}
+
+@media (max-width: 760px) {
+    .docs-data .input-explanation {
+    height:10px;
+    position:relative;
+    width: 90%;
+    float:left;
+    left:0px;
+    bottom:-190px;
+    }
+
+    .console .button-explanation {
+    height:70px;
+    }
+
+}
+
+
+.console .button-explanation .text {
+    display:none;
+}
+
+.docs-data .input-explanation .text {
+    display:none;
+}
+
+.console .done-button:hover ~ .button-explanation .done-button-explanation{
+    display:block;
+}
+
+.console .skip-button:hover ~ .button-explanation .skip-button-explanation{
+    display:block;
+}
+
+
+.console .launchroster-button:hover ~ .button-explanation .launchroster-button-explanation{
+    display:block;
+}
+
+.docs-data .addface-button:hover ~ .input-explanation .addface-button-explanation{
+    display:block;
+}
+
+.docs-data .id-input:hover ~ .input-explanation .id-explanation{
+    display:block;
+}
+
+.setup-content {
+    margin-bottom: 20px;
+}
+
+.bottom-10 {
+    bottom: 10px;
+}
+
+#face-carousel {
+    min-height: 300px;
+}
+
+.officer-face {
+    border: none;
+    height: 300px;
+    margin: auto;
+}
+
+.officer-face.officer-profile {
+    display: block;
+}
+
+#face-carousel .item {
+    margin-top: 0;
+    min-height: 0;
+}
+
+#face-carousel {
+    margin-bottom: 0;
+    min-height: 100%;
+}
+
+#face-carousel .carousel-control {
+    background-image: none;
+    color: black;
+}
+
+@media (min-width: 992px) {
+    .item .officer-face.officer-profile {
+        height: 490px;
+        width: auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .item .officer-face.officer-profile {
+        height: 590px;
+        width: auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .item .officer-face.officer-profile {
+        height: 460px;
+        padding-bottom: 10px;
+        width: auto;
+    }
+}
+
+#face-img {
+    border: none;
+    display: block;
+    margin: auto;
+    max-height: 500px;
+    padding-bottom: 10px;
+}
+
+.face-wrap {
+    margin: auto;
+    position: relative;
+}
+
+#face-tag-frame {
+    position: absolute;
+    border: 2px solid crimson;
+    visibility: hidden;
+    width: auto
+}
+
+## OOVA additions
+
+#dept-search-box { /* on Browse page */
+    text-align: center;
+}
+#dept-search { 
+
+}
+
+body.embed { /* on news/latest page */
+  margin: 0;
+  padding: 0;
+}
+iframe.embed { /* on index.html */
+    border: 0px solid #000;
+    width: 100%;
+    margin-top: 50px;
+}
+div#news {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+div#news h1 {
+    position: absolute;
+}
+
+div#index-left a.btn {
+    float: left;
+    margin-right: 20px;
+}
+
+/* import pages */
+table.display th, table.display td {
+    border: 1px solid;
+    padding: 2px;
+}
+
+.import-generated {
+    background-color: #99cc99;
+}

@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="theme-showcase" role="main">
+
+    <div class="text-center">
+        <div class="hero-section">
+            <div class="hero">No Secret Scientology Members</div>
+            <!-- <span style="color:#f9285c"></span> -->
+            <div class="subhero">Squirrel Squad</span>: A public, searchable database of The
+                Church of Scientology. Find names, photos, members complaints, salaries, work histories, and more.</div>
+        </div>
+
+        <div class="row display-flex vertical-padding horizontal-padding sink-row text-left" id="index-left">
+            <div class="col-lg-6 col-half-border bg-white">
+                <h1>
+                    <small>Search for an Scientology Member, Browse Scientology Locataions, or Read Complaints</small>
+                </h1>
+                <div class="text-gray-lighter">Search the cop database</div>
+
+                <p>
+                    Search our public database of scientology members in your city. We are always adding more.
+                </p>
+                <a href="/search" id="cpd" class="btn btn-lg btn-primary">
+                    Search All Members
+                </a>
+
+                <div class="small-horizontal-padding"></div>
+                <a href="/browse" class="btn btn-lg btn-primary">
+                    Browse Departments
+                </a>
+
+                <div class="small-horizontal-padding"></div>
+                <a href="/submit" class="btn btn-lg btn-primary">
+                    Submit Member Photos
+                </a>
+                Upload photos of officers in uniform.
+                <div class="small-horizontal-padding"></div>
+                <a href="/faces" id="cpd" class="btn btn-lg btn-primary">
+                    Facial Recognition Search
+                </a>
+                Try out our new beta feature!
+                <div class="small-horizontal-padding"></div>
+                <a href="/incidents" id="cpd" class="btn btn-lg btn-primary">
+                    Incident Reports
+                </a>
+                Add a scientology member encounter to the community database. Let People know where you saw them last.
+
+                <div class="small-horizontal-padding"></div>
+                <a href="/documents" id="cpd" class="btn btn-lg btn-primary">
+                    Search the Library
+                </a>
+                View our library of documents.
+            </div>
+
+            <div class="col-lg-6 col-half-border bg-white" id="news">
+                <h1>
+                    <small>Latest News (<a href="/news/">more</a>)</small>
+                </h1>
+                <iframe src="/news/latest" class="embed"></iframe>
+            </div>
+
+        </div>
+    </div>
+    <div class="hr-banner">
+        <div class="here">Contribute your time</div>
+        Want to help? We need people to do this work. Just as importantly, we need people to fund it.
+    </div>
+
+    <div class="row display-flex">
+        <div class="col-lg-6 bg-light-gray col-half-no-border text-left">
+            <h1>
+                <small>Work With Us</small>
+            </h1>
+            <p>
+                We're looking for volunteers to help us collect images, submit records, and aggregate incidents of
+                scientology members. If this sounds like fun to you, sign up and join us.
+            </p>
+            <a class="btn btn-lg btn-secondary" href="{{ url_for('main.get_started_labeling') }}">
+                Sign Up
+            </a>
+        </div>
+        <div class="col-lg-6 bg-blue-gray col-half-no-border text-left">
+            <h1>
+                <small>Fund Us</small>
+            </h1>
+            <p>
+                Squirrel Squad is completely the work of volunteer researchers. You can support our work
+                financially with
+                <a href="https://donorbox.org/squirrel-squad" target="_new">Donorbox</a>.
+                <!-- <a href="http://venmo.com/u/openoversightva" target="_new">Venmo</a>,
+                <a href="https://cash.app/$openoversight" target="_new">Cashapp</a>.
+                or <a href="https://www.gofundme.com/open-oversight-va-foia-the-police" target="_new">GoFundMe</a>. -->
+            </p>
+            <!--<a class="btn btn-lg btn-secondary" href="https://lucyparsonslabs.com/support/" target="_blank">
+                Donate
+            </a>-->
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}Browse OpenOversight{% endblock %}
+{% block meta %}<meta name="description" content="Browse a department on OpenOversight.">{% endblock %}
+{% block content %}
+
+<div class="container theme-showcase" role="main">
+  <div class="text-center frontpage-leads">
+    <h1><small>Browse a Department</small></h1>
+  </div>
+  <div id="dept-search-box">
+    <input id="dept-search" type="text" placeholder="Enter text to filter list">
+  </div>
+  <p>
+    <div id="dept-list" class="text-center frontpage-leads">
+      <div class="btn-group">
+        <h2>Decertified, Dismissed, & Wandering Ex-Police
+      </h2>
+          <p>
+          <a class="btn btn-lg btn-primary" href="/departments/2321/officers/">
+            Officers
+          </a>
+          
+            <a class="btn btn-lg btn-primary" href="/incidents/?department_id=2321">
+              Incidents
+            </a>
+            <a class="btn btn-lg btn-primary" href="/documents?title=&department=2321">
+              Library
+       	    </a>
+        </p>
+      </div>
+    </p>
+      {% for department in departments %}
+        <p>
+          <div class="btn-group">
+            <h2>
+              <a href="{{ url_for('main.department_profile', department_id=department.id) }}">{{ department.display_name }}</a>
+              {% if current_user.is_administrator %}
+                <a href="{{ url_for('main.edit_department', department_id=department.id) }}">
+                  <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                </a>
+              {% endif %}
+            </h2>
+            <div>
+              <b class="dept-{{ department.id }}">Officers Documented:</b> {{ stats.get(department.id,(0,0,0))[0] | thousands_separator  }}
+              <br>
+              {% if stats.get(department.id,(0,0,0))[1] > 0 %}
+              <b class="dept-{{ department.id }}">Incidents Documented:</b> {{ stats.get(department.id,(0,0,0))[1] | thousands_separator }}
+              <br>
+              {% endif %}
+              {% if stats.get(department.id,(0,0,0))[2] > 0 %}
+              <b class="dept-{{ department.id }}">Library Documents:</b> {{ stats.get(department.id,(0,0,0))[2] | thousands_separator  }}
+              {% endif %}
+            </div>
+          <p>
+          <a class="btn btn-lg btn-primary" href="{{ url_for('main.list_officer', department_id=department.id) }}">
+             Officers
+          </a>
+          {% if stats.get(department.id,(0,0,0))[1] > 0 %}
+            <a class="btn btn-lg btn-primary" href="{{ url_for('main.incident_api', department_id=department.id) }}">
+               Incidents
+            </a>
+          {% endif %}
+          {% if stats.get(department.id,(0,0,0))[2] > 0 %}
+            <a class="btn btn-lg btn-primary" href="/documents?title=&department={{ department.id }}">
+               Library
+            </a>
+          {% endif %}
+              </p>
+          </div>
+        </p>
+      {% endfor %}
+    </div>
+  </div>
+
+<script type="text/javascript">
+
+$( document ).ready(function() {
+  $('#dept-search').on('input', function() {
+      $('#dept-list .btn-group').hide();
+      var txt = $('#dept-search').val();
+      console.log(txt);
+      $('#dept-list .btn-group').each(function(){
+         if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+             $(this).show();
+         }
+      });
+  });
+});
+
+</script>
+
+{% endblock content %}
